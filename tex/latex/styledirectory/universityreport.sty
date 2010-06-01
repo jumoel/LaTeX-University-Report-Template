@@ -96,12 +96,16 @@
 
 \makepagestyle{introduction}
   \makeevenfoot{introduction}{}{\thepage}{}
-  \makeoddfoot{introduction}{}{\thepage}{}
+  \makeoddfoot {introduction}{}{\thepage}{}
+
 
 \makepagestyle{body}
-  \makeevenhead{body}{\mysubject}{\mytitle}{\thepage}
-  \makeoddhead{body}{\mysubject}{\mytitle}{\thepage}
+  \makeoddhead {body}{\leftmark}{}{\rightmark}
+  \makeevenhead{body}{\rightmark}{}{\leftmark}
   \makeheadrule{body}{\textwidth}{\normalrulethickness}
+
+  \makeevenfoot{body}{}{\thepage}{}
+  \makeoddfoot {body}{}{\thepage}{}
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
