@@ -20,6 +20,9 @@
 \usepackage{todo}
 \usepackage{longtable}
 \usepackage{pdflscape}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage[farskip=0pt, captionskip=0pt]{subfig}
 
 %%% BIBLIOGRAPHY
  \usepackage[numbers]{natbib}
@@ -28,6 +31,40 @@
  \setcitestyle{numbers,square,aysep={;},yysep={,},notesep={, }}
 
 %%% ENDBIBLIOGRAPHY
+
+%%% FIGURE COMMANDS
+\newlength{\fboxsepbackup}
+\newlength{\fboxrulebackup}
+\newcommand{\sidebyside}[5][0.5pt]{
+  \setlength{\fboxsepbackup}{\fboxsep}
+
+  \setlength{\fboxrulebackup}{\fboxrule}
+
+  \setlength{\fboxsep}{0pt}
+  \setlength{\fboxrule}{#1}
+
+  \begin{figure}[h]
+    \centering
+    \subfloat[Med KI]{\label{#5ai}\fbox{\includegraphics[width=0.4\textwidth]{#2}}} \qquad
+    \subfloat[Uden KI]{\label{#5noai}\fbox{\includegraphics[width=0.4\textwidth]{#3}}}
+    \caption{#4}
+    \label{#5}
+  \end{figure}
+
+  \setlength{\fboxsep}{\fboxsepbackup}
+  \setlength{\fboxrule}{\fboxrulebackup}
+}
+
+
+\newcommand{\fig}[4][8cm]{
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=#1]{#2}
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+%%% END FIGURE COMMANDS
 
 \renewcommand{\familydefault}{\rmdefault}
 
