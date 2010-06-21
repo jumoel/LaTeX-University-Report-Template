@@ -4,10 +4,10 @@
 \usepackage{textcomp}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[danish]{babel}
+\usepackage[english,danish]{babel}
 \usepackage{url}
 \usepackage{lastpage}
-\usepackage{bookmark}
+\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[all]{xy}
 \usepackage{amsmath}
@@ -63,7 +63,6 @@
   \setlength{\fboxrule}{\fboxrulebackup}
 }
 
-
 \newcommand{\fig}[4][8cm]{
   \begin{figure}[htbp]
     \centering
@@ -73,6 +72,8 @@
   \end{figure}
 }
 %%% END FIGURE COMMANDS
+
+\newcommand{\myabstract}{}
 
 \renewcommand{\familydefault}{\rmdefault}
 
@@ -174,15 +175,22 @@
 %\fixpdflayout
 
 \newcommand{\preamble}{
+\selectlanguage{danish}
 \maketitle
 
 \pagestyle{introduction}
   \pagenumbering{roman}
 
+  %\hypersetup{linkbordercolor={1 1 1}}
+  \hypersetup{pdfborder={0 0 0}}
+
+  \myabstract
+
   \tableofcontents
   \clearpage
 
   \listoffigures
+  \listoftables
 
   %\newlength{\oldparindent}
   %\setlength{\oldparindent}{\parindent}
@@ -206,4 +214,7 @@
 
   \pagenumbering{arabic}
   \pagestyle{body}
+
+  \hypersetup{pdfborder={0 0 1}}
+
 }
