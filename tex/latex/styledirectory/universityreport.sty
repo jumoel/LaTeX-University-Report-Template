@@ -1,4 +1,4 @@
-\ProvidesPackage{report}
+\ProvidesPackage{universityreport}
 
 \usepackage{cmbright}
 \usepackage{textcomp}
@@ -23,6 +23,14 @@
 \usepackage{xspace}
 \usepackage{multirow}
 \usepackage[farskip=0pt, captionskip=0pt]{subfig}
+
+%% WORD BREAKS BECAUSE LATEX SUCKS %%
+\hyphenation{kamp-vogns-ag-tig kort-es-te la-by-rint-op-sæt-ning-en
+  fri-tids-hjem spil-op-lev-el-ser vo-res ude-luk-ken-de
+  væ-sent-lig-ste for-skel-lig-e bør-ne-ne path-find-ing
+  op-rind-e-li-ge ge-ne-re-re ge-ne-re-ret pas-se-re-de spø-gel-se
+  smooth-ing man-ge væ-sent-ligt byg-ning-er-ne hjer-ne-ak-ti-vi-tet kræ-ver}
+
 
 %%% BIBLIOGRAPHY
  \usepackage[numbers]{natbib}
@@ -75,6 +83,7 @@
 
 % more width for figure numbers
 \setlength{\cftfigurenumwidth}{3.0em}
+\setlength{\cfttablenumwidth}{3.0em}
 
 %% TODO-changes
 %\renewcommand{\todoitem}[2]{%
@@ -160,6 +169,7 @@
 \chapterstyle{combined}
 
 \numberwithin{figure}{section}
+\numberwithin{table}{section}
 
 %\fixpdflayout
 
