@@ -25,6 +25,7 @@
 \usepackage{hyperref}
 \usepackage{bookmark}
 \usepackage[all]{hypcap}
+\usepackage{memhfixc}
 
 %% WORD BREAKS BECAUSE LATEX SUCKS %%
 \hyphenation{kamp-vogns-ag-tig kort-es-te la-by-rint-op-s�t-ning-en
@@ -172,8 +173,8 @@
 
 \chapterstyle{combined}
 
-\numberwithin{figure}{section}
-\numberwithin{table}{section}
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
 
 %\fixpdflayout
 
@@ -196,24 +197,6 @@
   \clearpage
 
   \listoftables
-  \clearpage
-
-  %\newlength{\oldparindent}
-  %\setlength{\oldparindent}{\parindent}
-  %\setlength{\parindent}{0pt}
-  %\nonzeroparskip
-
-  % \plainbreak{1}
-  % Figurerne er nummereret på følgende måde:
-
-  % \texttt{<ugeopgavenummer>.<delopgavenummer>.<figurnummer>}
-
-  % Dvs. at figuren \emph{1.2.1} er den første figur, tilhørende den anden
-  % delopgave i den første ugeopgave.
-
-  %\setlength{\parindent}{\oldparindent}
-  %\traditionalparskip
-
   \clearpage
 
   \aliaspagestyle{chapter}{body}
