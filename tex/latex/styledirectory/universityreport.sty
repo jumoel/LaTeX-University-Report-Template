@@ -7,7 +7,6 @@
 \usepackage[english,danish]{babel}
 \usepackage{url}
 \usepackage{lastpage}
-\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[all]{xy}
 \usepackage{amsmath}
@@ -23,6 +22,9 @@
 \usepackage{xspace}
 \usepackage{multirow}
 \usepackage[farskip=0pt, captionskip=0pt]{subfig}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[all]{hypcap}
 
 %% WORD BREAKS BECAUSE LATEX SUCKS %%
 \hyphenation{kamp-vogns-ag-tig kort-es-te la-by-rint-op-sæt-ning-en
@@ -53,11 +55,11 @@
 
   \begin{figure}[h]
     \centering
-    \subfloat[Med KI]{\label{#5ai}\fbox{\includegraphics[width=0.4\textwidth]{#2}}} \qquad
-    \subfloat[Uden
-    KI]{\label{#5noai}\fbox{\includegraphics[width=0.4\textwidth]{#3}}}
-    \label{#5}
+    \subfloat[Med KI]{\label{#5ai}\fbox{\includegraphics[width=0.4\textwidth]{#2}}}
+    \qquad
+    \subfloat[Uden KI]{\label{#5noai}\fbox{\includegraphics[width=0.4\textwidth]{#3}}}
     \caption{#4}
+    \label{#5}
   \end{figure}
 
   \setlength{\fboxsep}{\fboxsepbackup}
@@ -68,8 +70,8 @@
   \begin{figure}[htbp]
     \centering
     \includegraphics[width=#1]{#2}
-    \label{#4}
     \caption{#3}
+    \label{#4}
   \end{figure}
 }
 %%% END FIGURE COMMANDS
