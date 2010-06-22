@@ -54,9 +54,10 @@
   \begin{figure}[h]
     \centering
     \subfloat[Med KI]{\label{#5ai}\fbox{\includegraphics[width=0.4\textwidth]{#2}}} \qquad
-    \subfloat[Uden KI]{\label{#5noai}\fbox{\includegraphics[width=0.4\textwidth]{#3}}}
-    \caption{#4}
+    \subfloat[Uden
+    KI]{\label{#5noai}\fbox{\includegraphics[width=0.4\textwidth]{#3}}}
     \label{#5}
+    \caption{#4}
   \end{figure}
 
   \setlength{\fboxsep}{\fboxsepbackup}
@@ -67,8 +68,8 @@
   \begin{figure}[htbp]
     \centering
     \includegraphics[width=#1]{#2}
-    \caption{#3}
     \label{#4}
+    \caption{#3}
   \end{figure}
 }
 %%% END FIGURE COMMANDS
@@ -190,7 +191,10 @@
   \clearpage
 
   \listoffigures
+  \clearpage
+
   \listoftables
+  \clearpage
 
   %\newlength{\oldparindent}
   %\setlength{\oldparindent}{\parindent}
